@@ -86,7 +86,7 @@ def grammar_correction(text):
         st.warning("Text truncated to 30000 chars for processing.")
         
     prompt = f"""
-    You are a writing assistant. Correct grammatical errors and improve readability.
+    You are a writing assistant. Correct grammatical errors and improve readability. Replace numbers with their corresponding words.
     Do not change the underlying meaning.
     Return ONLY the improved text.
     
@@ -329,4 +329,5 @@ if uploaded_file:
 
                     with st.expander("See what the computer heard (STT Transcript)"):
                         st.write(transcribed)
+
                         st.caption("Comparison between the text we sent to TTS vs. what the computer heard back.")
